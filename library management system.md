@@ -1,10 +1,21 @@
 # Library management system API #
 
-This API allows you to reserve a book from library.
+This API allows you to reserve/order a book from library.
 
-The API is available at `https://simple-books-api.glitch.me`
+## Opearion configured on end point ##
 
-## Endpoints ##
+1) Status of API end
+2) List of books available in library
+3) Get inforamtion about single book
+4) Submit an order
+5) Get all orders
+6) Get an order with order ID
+7) Update an order
+8) Delete an order
+9) API Authentication
+
+
+## Implementation on lab ##
 
 ### 1) Status ###
 
@@ -31,7 +42,7 @@ Optional query parameters:
 - limit: a number between 1 and 20.
 
 
-### 3) Get a single book ###
+### 3) Get a single book detail ###
 
 GET `/books/:bookId`
 
