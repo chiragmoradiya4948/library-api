@@ -12,6 +12,13 @@ GET `/status`
 
 Returns the status of the API.
 
+#### hands on : Go to EC2 > Auto scaling group, Enter name of ASG & Click on 'Create a launch template'
+####
+<img src="/Images/Rest-API 1.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
+
 ### 2) List of books available in library ###
 
 GET `/books`
@@ -116,7 +123,7 @@ The request body needs to be in JSON format and include the following properties
 
  ```
  {
-    "clientName": "Postman",
+    "clientName": "Ram",
     "clientEmail": "demo@example.com"
 }
  ```
