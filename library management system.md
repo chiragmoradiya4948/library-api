@@ -23,9 +23,17 @@ GET `/status`
 
 Returns the status of the API.
 
-#### hands on : Go to EC2 > Auto scaling group, Enter name of ASG & Click on 'Create a launch template'
+#### hands on : In GET method, passed end point's URL and /status which can give status of end point. Here got Status: 200 OK means everything is working fine.
 ####
-<img src="/Images/Rest-API 1.png" width="auto" height="auto" style="border:5px double black;"
+<img src="/Images/Rest-API 3.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
+
+- Now you can see in end point address's mapped with {{baseURL}} which is set as variable.
+
+####
+<img src="/Images/Rest-API 4.png" width="auto" height="auto" style="border:5px double black;"
      alt="REST API"
      style="float: left; margin-right: 6px;" />
 ####
@@ -41,6 +49,25 @@ Optional query parameters:
 - type: fiction or non-fiction
 - limit: a number between 1 and 20.
 
+#### Here we have filtered books based on 'type' which is passed on parameter and can see the result.
+####
+<img src="/Images/Rest-API 1.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
+
+#### If you entered type value which is incorrect, can get output as per below.
+####
+<img src="/Images/Rest-API 6.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
+
+####
+<img src="/Images/Rest-API 7.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
 
 ### 3) Get a single book detail ###
 
@@ -48,6 +75,13 @@ GET `/books/:bookId`
 
 Retrieve detailed information about a book.
 
+#### You can also get single book details as per below.
+
+####
+<img src="/Images/Rest-API 2.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
 
 ### 4) Submit an order ###
 
@@ -70,6 +104,14 @@ Authorization: Bearer <YOUR TOKEN>
   "customerName": "John"
 }
 ```
+#### Here We have ordered book which having bookId = 1 and can see output as true, however you need to have authentication as per step 9.
+#### Once we get accessToken from step 9, we can pass as bearer token and order a book.
+
+####
+<img src="/Images/Rest-API 9.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
 
 The response body will contain the order Id.
 
@@ -78,6 +120,14 @@ The response body will contain the order Id.
 GET `/orders`
 
 Allows you to view all orders. Requires authentication.
+
+#### You can get all orders by giving orderId as parameter along with access token.
+
+####
+<img src="/Images/Rest-API 9.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
 
 ### 6) Get an order ###
 
@@ -104,6 +154,20 @@ Authorization: Bearer <YOUR TOKEN>
   "customerName": "John"
 }
 ```
+#### You can see new name as john jacobs and we have got status 204 which means request is successfully completed.
+
+####
+<img src="/Images/Rest-API 11.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
+
+####
+<img src="/Images/Rest-API 12.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
+
 
 ### 8) Delete an order ###
 
@@ -118,6 +182,20 @@ The request body needs to be empty.
 DELETE /orders/PF6MflPDcuhWobZcgmJy5
 Authorization: Bearer <YOUR TOKEN>
 ```
+#### You can see DELETE method on header and given which order we need to delete. And we you get list of available books can see ID=1 book is available
+
+####
+<img src="/Images/Rest-API 13.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
+
+
+####
+<img src="/Images/Rest-API 5.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
 
 ## 9) API Authentication ##
 
@@ -140,6 +218,14 @@ The request body needs to be in JSON format and include the following properties
  ```
 
 The response body will contain the access token. The access token is valid for 7 days.
+
+#### Here I have registered  myself by giving ClientName and clientEmail and got accessToken.
+
+####
+<img src="/Images/Rest-API 8.png" width="auto" height="auto" style="border:5px double black;"
+     alt="REST API"
+     style="float: left; margin-right: 6px;" />
+####
 
 **Possible errors**
 
