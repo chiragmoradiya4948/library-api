@@ -23,7 +23,7 @@ GET `/status`
 
 Returns the status of the API.
 
-#### hands on : In GET method, passed end point's URL and /status which can give status of end point. Here got Status: 200 OK means everything is working fine.
+#### In GET method, we have passed end point's URL and /status which will give status of end point. Here got Status: 200 OK means everything is working fine.
 ####
 <img src="/Images/Rest-API 3.png" width="auto" height="auto" style="border:5px double black;"
      alt="REST API"
