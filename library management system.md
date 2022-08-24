@@ -232,4 +232,3 @@ The response body will contain the access token. The access token is valid for 7
 Status code 409 - "API client already registered." Try changing the values for `clientEmail` and `clientName` to something else.
 
 ### End of Library management system API page ###
-#### Author by Chirag Moradiya #### 
